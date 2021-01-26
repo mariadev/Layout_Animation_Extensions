@@ -9,11 +9,16 @@ import UIKit
 public enum Padding {
     case top, left, right, bottom, verticalMargins, horizontalMargins, allMargins
 }
+protocol LayoutHelperStackViews {
+    func setupSubview(backgroundColor: UIColor, cornerRadius: CGFloat, borderWidth: CGFloat, borderColor: UIColor ) -> CustomUIStackView
+    func height(_ height: CGFloat) -> CustomUIStackView
+    func width(_ width: CGFloat) -> CustomUIStackView
+    func padding(_ margins: [Padding], amount: CGFloat) -> CustomUIStackView
+}
 
-extension UIStackView {
+extension LayoutHelperStackViews where Self: UIStackView {
     
-    @discardableResult
-    open func setupSubview(backgroundColor: UIColor = .white, cornerRadius: CGFloat = 0, borderWidth: CGFloat = 0, borderColor: UIColor = .clear) -> UIStackView {
+    func setupSubview(backgroundColor: UIColor = .white, cornerRadius: CGFloat = 0, borderWidth: CGFloat = 0, borderColor: UIColor = .clear) -> CustomUIStackView {
         let subview = UIView(frame: bounds)
         subview.backgroundColor = backgroundColor
         subview.layer.masksToBounds = true
@@ -22,25 +27,22 @@ extension UIStackView {
         subview.layer.borderColor = borderColor.cgColor
         subview.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         insertSubview(subview, at: 0)
-        return self
+        return self as! CustomUIStackView
     }
     
-    @discardableResult
-    open func height(_ height: CGFloat) -> UIStackView {
+    func height(_ height: CGFloat) -> CustomUIStackView {
         translatesAutoresizingMaskIntoConstraints = false
         heightAnchor.constraint(equalToConstant: height).isActive = true
-        return self
+        return self as! CustomUIStackView
     }
     
-    @discardableResult
-    open func width(_ width: CGFloat) -> UIStackView {
+    func width(_ width: CGFloat) -> CustomUIStackView {
         translatesAutoresizingMaskIntoConstraints = false
         widthAnchor.constraint(equalToConstant: width).isActive = true
-        return self
+        return self as! CustomUIStackView
     }
     
-    @discardableResult
-    open func padding(_ margins: [Padding], amount: CGFloat) -> UIStackView {
+    func padding(_ margins: [Padding], amount: CGFloat) -> CustomUIStackView {
         isLayoutMarginsRelativeArrangement = true
         
         margins.forEach { (padding) in
@@ -64,9 +66,12 @@ extension UIStackView {
             }
         }
         
-        return self
+        return self as! CustomUIStackView
     }
 }
 
-
+class CustomUIStackView : UIStackView, LayoutHelper, LayoutHelperStackViews {
+    
+    
+}
 

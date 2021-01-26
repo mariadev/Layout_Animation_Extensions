@@ -13,64 +13,64 @@
 //
 import UIKit
 
-public final class CustomeViews {
+public final class CustomeColoredViews {
     
-    lazy var view1: UIView = {
-        let view = UIView()
+    lazy var view1: CustomUIView = {
+        let view = CustomUIView()
         view.backgroundColor = MyLittlePonyPalette.lightPink
         return view
     }()
     
-    lazy var view2: UIView = {
-        let view = UIView()
+    lazy var view2: CustomUIView = {
+        let view = CustomUIView()
         view.backgroundColor = MyLittlePonyPalette.melon
         return view
     }()
     
-    lazy var view3: UIView = {
-        let view = UIView()
+    lazy var view3: CustomUIView = {
+        let view = CustomUIView()
         view.backgroundColor = MyLittlePonyPalette.deepChampagne
         return view
     }()
     
-    lazy var view4: UIView = {
-        let view = UIView()
+    lazy var view4: CustomUIView = {
+        let view = CustomUIView()
         view.backgroundColor = MyLittlePonyPalette.lemonYellowCrayola
         return view
     }()
     
-    lazy var view5: UIView = {
-        let view = UIView()
+    lazy var view5: CustomUIView = {
+        let view = CustomUIView()
         view.backgroundColor = MyLittlePonyPalette.teaGreen
         return view
     }()
     
-    lazy var view6: UIView = {
-        let view = UIView()
+    lazy var view6: CustomUIView = {
+        let view = CustomUIView()
         view.backgroundColor = MyLittlePonyPalette.celeste
         return view
     }()
 
-    lazy var view7: UIView = {
-        let view = UIView()
+    lazy var view7: CustomUIView = {
+        let view = CustomUIView()
         view.backgroundColor = MyLittlePonyPalette.babyBlueEyes
         return view
     }()
     
-    lazy var view8: UIView = {
-        let view = UIView()
+    lazy var view8: CustomUIView = {
+        let view = CustomUIView()
         view.backgroundColor = MyLittlePonyPalette.maximumBluePurple
         return view
     }()
 
-    lazy var view9: UIView = {
-        let view = UIView()
+    lazy var view9: CustomUIView = {
+        let view = CustomUIView()
         view.backgroundColor = MyLittlePonyPalette.mauve
         return view
     }()
     
-    lazy var view10: UIView = {
-        let view = UIView()
+    lazy var view10: CustomUIView = {
+        let view = CustomUIView()
         view.backgroundColor = MyLittlePonyPalette.babyPowder
         return view
     }()

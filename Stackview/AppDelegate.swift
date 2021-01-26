@@ -15,7 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow()
         window?.makeKeyAndVisible()
-        window?.rootViewController = CollectionView()
+        let collectionViewNavigation = CollectionView().wrappedInNavigation()
+        
+        collectionViewNavigation.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        collectionViewNavigation.navigationBar.shadowImage = UIImage()
+        collectionViewNavigation.navigationBar.isTranslucent = true
+        
+        window?.rootViewController = collectionViewNavigation
         return true
     }
     
