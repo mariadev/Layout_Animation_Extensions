@@ -40,10 +40,8 @@ class CollectionView: UIViewController {
         collection.delegate = self
         
         collection.register(TitleSection.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "Views")
-       
         collection.register(UICollectionViewCell.self, forCellWithReuseIdentifier: verticalCell)
         collection.register(AlbumCell.self, forCellWithReuseIdentifier: horizontalCell)
-        
     }
     
 }
@@ -76,30 +74,26 @@ extension CollectionView: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if (indexPath.section == 1) {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: verticalCell, for: indexPath)
-        let image = UIImage(named: self.itemsSection1[indexPath.row])
-        let cellImage = CustomUIImageView(image: image)
-        cell.contentView.addSubview(cellImage)
-        layoutImage(imageView: cellImage, cell: cell)
-        
-        return cell
-        }
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: horizontalCell, for: indexPath) as! AlbumCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: verticalCell, for: indexPath)
+            let image = UIImage(named: itemsSection1[indexPath.row])
+            let cellImage = CustomUIImageView(image: image)
+            cell.contentView.addSubview(cellImage)
+            layoutImage(imageView: cellImage, cell: cell)
             return cell
+        }
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: horizontalCell, for: indexPath) as! AlbumCell
+        cell.parentViewController = self
+        return cell
     }
-
 }
-
 
 extension CollectionView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if indexPath.section == 1 {
             let rectShortSide = (collectionView.frame.width - 8) / 4
             let rectLongSide = (collectionView.frame.height - 8) / 4
-            
             return CGSize(width: rectShortSide , height: rectLongSide)
         }
-        
         return CGSize(width: view.frame.width , height: view.frame.height/3)
     }
     
@@ -120,7 +114,7 @@ extension CollectionView: UICollectionViewDelegateFlowLayout {
 
 extension CollectionView {
     
-    func  setupLayout () {
+    func setupLayout () {
         
         let layout = collection.collectionViewLayout as! UICollectionViewFlowLayout
         layout.minimumInteritemSpacing = 0
@@ -133,12 +127,10 @@ extension CollectionView {
         
         collection.contentInset = UIEdgeInsets(top: 4, left: 4, bottom: 4, right: 4)
         view.addSubview(collection)
- 
     }
     
     func appyTheme() {
         collection.backgroundColor = .clear
-
     }
-    
 }
+
