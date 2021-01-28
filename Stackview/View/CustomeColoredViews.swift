@@ -15,6 +15,12 @@ import UIKit
 
 public final class CustomeColoredViews {
     
+    lazy var view0: CustomUIView = {
+        let view = CustomUIView()
+        view.backgroundColor = MyLittlePonyPalette.lightPink
+        return view
+    }()
+    
     lazy var view1: CustomUIView = {
         let view = CustomUIView()
         view.backgroundColor = MyLittlePonyPalette.lightPink
@@ -71,7 +77,7 @@ public final class CustomeColoredViews {
     
     lazy var view10: CustomUIView = {
         let view = CustomUIView()
-        view.backgroundColor = MyLittlePonyPalette.babyPowder
+        view.backgroundColor = MyLittlePonyPalette.mauve
         return view
     }()
    

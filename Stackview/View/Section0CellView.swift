@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AlbumCell: UICollectionViewCell {
+class Section0CellView: UICollectionViewCell {
     
     fileprivate var itemsSection2: [String] = [
         "image0",
@@ -44,24 +44,25 @@ class AlbumCell: UICollectionViewCell {
     }
 }
 
-extension AlbumCell: UICollectionViewDelegateFlowLayout {
+extension Section0CellView: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         let rectShortSide = (collectionView.frame.width - 8) / 4
-        let rectLongSide = (collectionView.frame.height - 8) / 1.2
+        let rectLongSide = (collectionView.frame.height)
         return CGSize(width: rectShortSide , height: rectLongSide)
     }
     
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
+    
 }
 
-extension AlbumCell: UICollectionViewDataSource {
+extension Section0CellView: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return itemsSection2.count
@@ -79,26 +80,29 @@ extension AlbumCell: UICollectionViewDataSource {
     private func layoutImage(imageView: CustomUIImageView, cell: UICollectionViewCell) {
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
+        imageView.layer.cornerRadius = 15
         imageView.setAnchor(top: cell.topAnchor, bottom: cell.bottomAnchor, right: cell.leadingAnchor, left: cell.trailingAnchor, paddingLeft: 4, paddingRight: 4)
     }
+    
 }
 
-extension AlbumCell: UICollectionViewDelegate {
+extension Section0CellView: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let detailViewController = DetailViewController()
         detailViewController.item = indexPath.row
+        detailViewController.section = indexPath.section
         parentViewController?.navigationController?.pushViewController( detailViewController , animated: true)
     }
 }
 
-extension AlbumCell {
+extension Section0CellView {
     
     func setupLayout () {
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         layout.minimumInteritemSpacing = 0
         layout.scrollDirection = .horizontal
-        collectionView.contentInset = UIEdgeInsets(top: 4, left: 4, bottom: 4, right: 4)
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 4, bottom: 0, right: 4)
     }
     
     func appyTheme() {

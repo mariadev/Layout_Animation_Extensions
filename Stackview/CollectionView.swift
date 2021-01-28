@@ -19,8 +19,25 @@ class CollectionView: UIViewController {
     
     fileprivate var itemsSection1: [String] = [
         "image8",
-
+        "image8",
+        "image8",
+        "image8",
+        "image8",
+        "image8",
+        "image8",
+        
     ]
+    
+    fileprivate var labelTextSection1: [String] = [
+        "Shake",
+        "Fadein",
+        "FadeOut",
+        "FadeColor",
+        "PopIn",
+        "PopOut",
+        "Hop",
+    ]
+    
     let collection = UICollectionView(frame: UIScreen.main.bounds, collectionViewLayout: UICollectionViewFlowLayout())
     let detailViewController = DetailViewController()
     
@@ -28,7 +45,7 @@ class CollectionView: UIViewController {
     
     let verticalCell = "verticalCell"
     let horizontalCell = "horizontalCell"
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,9 +56,9 @@ class CollectionView: UIViewController {
         collection.dataSource = self
         collection.delegate = self
         
-        collection.register(TitleSection.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "Views")
-        collection.register(UICollectionViewCell.self, forCellWithReuseIdentifier: verticalCell)
-        collection.register(AlbumCell.self, forCellWithReuseIdentifier: horizontalCell)
+        collection.register(Section1CellView.self, forCellWithReuseIdentifier: verticalCell)
+        collection.register(Section0CellView.self, forCellWithReuseIdentifier: horizontalCell)
+        collection.register(TitleSectionView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: TitleSectionView.identifier)
     }
     
 }
@@ -49,11 +66,9 @@ class CollectionView: UIViewController {
 extension CollectionView: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        push (item : indexPath.row)
-    }
-    
-    func push (item : Int) {
-        detailViewController.item = item
+        let detailViewController = DetailViewController()
+        detailViewController.item = indexPath.row
+        detailViewController.section = indexPath.section
         navigationController?.pushViewController( detailViewController , animated: true)
     }
 }
@@ -61,10 +76,10 @@ extension CollectionView: UICollectionViewDelegate {
 extension CollectionView: UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-         return 2
-     }
-     
-     
+        return 2
+    }
+    
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if (section == 1) {
             return itemsSection1.count
@@ -74,33 +89,44 @@ extension CollectionView: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if (indexPath.section == 1) {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: verticalCell, for: indexPath)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: verticalCell, for: indexPath) as! Section1CellView
             let image = UIImage(named: itemsSection1[indexPath.row])
-            let cellImage = CustomUIImageView(image: image)
-            cell.contentView.addSubview(cellImage)
-            layoutImage(imageView: cellImage, cell: cell)
+            let text = labelTextSection1[indexPath.row]
+            cell.label.text = text
+            cell.imageItem.image = image
             return cell
         }
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: horizontalCell, for: indexPath) as! AlbumCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: horizontalCell, for: indexPath) as! Section0CellView
         cell.parentViewController = self
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        if (indexPath.section == 1) {
+            let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: TitleSectionView.identifier, for: indexPath) as! TitleSectionView
+            header.configure()
+            header.label.text = "Animations"
+            return header
+        }
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: TitleSectionView.identifier, for: indexPath) as! TitleSectionView
+        header.configure()
+        header.label.text = "StackViews"
+        return header
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: collectionView.frame.size.width, height: 50)
     }
 }
 
 extension CollectionView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let rectShortSide = (collectionView.frame.width) / 4
+        let rectLongSide = (collectionView.frame.height) / 4
         if indexPath.section == 1 {
-            let rectShortSide = (collectionView.frame.width - 8) / 4
-            let rectLongSide = (collectionView.frame.height - 8) / 4
+            let rectLongSide = (collectionView.frame.height) / 3.4
             return CGSize(width: rectShortSide , height: rectLongSide)
         }
-        return CGSize(width: view.frame.width , height: view.frame.height/3)
-    }
-    
-    func layoutImage(imageView: CustomUIImageView, cell: UICollectionViewCell) {
-        imageView.contentMode = .scaleAspectFill
-        imageView.clipsToBounds = true
-        imageView.setAnchor(top: cell.topAnchor, bottom: cell.bottomAnchor, right: cell.leadingAnchor, left: cell.trailingAnchor, paddingLeft: 4, paddingRight: 4)
+        return CGSize(width: view.frame.width , height: rectLongSide)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {

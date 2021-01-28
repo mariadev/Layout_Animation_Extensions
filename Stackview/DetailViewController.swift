@@ -11,11 +11,11 @@ class DetailViewController: UIViewController {
     let model = ModelControllers()
     let customeViews = CustomeColoredViews()
     var item = Int()
+    var section = Int()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //        getLayout(item: item)
-        model.getLayout(item : item, view: view)
+        model.getLayout(item : item, view: view, section: section)
     }
     
     

@@ -28,6 +28,8 @@ protocol LayoutHelper {
     
     func toBottomAndCenter(bottomView: UIView, centerView: UIView, constant: CGFloat)
     
+    func toTopAndCenter(topView: UIView, centerView: UIView, constant: CGFloat)
+    
     func setWidthWithMultiplier(viewWidth: NSLayoutDimension,
                                 multiplier: CGFloat,
                                 constant: CGFloat)
@@ -64,6 +66,12 @@ extension LayoutHelper where Self: UIView {
     func toBottomAndCenter(bottomView: UIView, centerView: UIView, constant: CGFloat = 0) {
         translatesAutoresizingMaskIntoConstraints = false
         bottomAnchor.constraint(equalTo: bottomView.bottomAnchor, constant: -constant).isActive = true
+        centerXAnchor.constraint(equalTo:  centerView.centerXAnchor).isActive = true
+    }
+    
+    func toTopAndCenter(topView: UIView, centerView: UIView, constant: CGFloat = 0) {
+        translatesAutoresizingMaskIntoConstraints = false
+        topAnchor.constraint(equalTo: topView.topAnchor, constant: -constant).isActive = true
         centerXAnchor.constraint(equalTo:  centerView.centerXAnchor).isActive = true
     }
     
