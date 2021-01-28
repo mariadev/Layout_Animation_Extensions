@@ -31,6 +31,10 @@ class Section1CellView: UICollectionViewCell {
         imageItem.contentMode = .scaleAspectFill
         imageItem.clipsToBounds = true
         imageItem.layer.cornerRadius = 15
+        
+        label.font = UIFont.preferredFont(forTextStyle: UIFont.TextStyle.subheadline)
+        label.textColor = .darkText
+        
     }
 
 

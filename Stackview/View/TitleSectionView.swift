@@ -16,7 +16,7 @@ final class TitleSectionView: UICollectionReusableView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
-        label.text = "hola"
+        style()
     }
     required init?(coder: NSCoder) {
         fatalError()
@@ -31,6 +31,7 @@ final class TitleSectionView: UICollectionReusableView {
         label.frame = bounds
     }
     private func style() {
-        label.font = UIFont.preferredFont(forTextStyle: .title2)
+        label.font = UIFont.preferredFont(forTextStyle: UIFont.TextStyle.title1)
+        label.textColor = .darkText
     }
 }
