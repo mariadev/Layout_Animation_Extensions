@@ -8,6 +8,7 @@
 import UIKit
 
 protocol Style {
+    
     func dropShadow(shadowColor: CGColor, shadowOpacity: Float, shadowOffsetWidth: CGFloat, shadowOffsetHeight: CGFloat, shadowRadius: CGFloat)
     
     }

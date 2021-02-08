@@ -6,5 +6,5 @@
 //
 import UIKit
 
-class CustomUIStackView : UIStackView, LayoutHelper, LayoutHelperStackViews {}
+class CustomUIStackView : UIStackView, LayoutHelper, StackViewsLayoutHelper {}
 

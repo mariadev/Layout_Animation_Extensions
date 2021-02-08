@@ -56,9 +56,9 @@ class CollectionView: UIViewController {
         collection.dataSource = self
         collection.delegate = self
         
-        collection.register(Section1CellView.self, forCellWithReuseIdentifier: verticalCell)
-        collection.register(Section0CellView.self, forCellWithReuseIdentifier: horizontalCell)
-        collection.register(TitleSectionView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: TitleSectionView.identifier)
+        collection.register(Section1CustomeCellCollectionView.self, forCellWithReuseIdentifier: verticalCell)
+        collection.register(Section0CustomeCellCollectionView.self, forCellWithReuseIdentifier: horizontalCell)
+        collection.register(CustomeTitleSectionCollectionView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: CustomeTitleSectionCollectionView.identifier)
     }
     
 }
@@ -89,26 +89,26 @@ extension CollectionView: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if (indexPath.section == 1) {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: verticalCell, for: indexPath) as! Section1CellView
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: verticalCell, for: indexPath) as! Section1CustomeCellCollectionView
             let image = UIImage(named: itemsSection1[indexPath.row])
             let text = labelTextSection1[indexPath.row]
             cell.label.text = text
             cell.imageItem.image = image
             return cell
         }
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: horizontalCell, for: indexPath) as! Section0CellView
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: horizontalCell, for: indexPath) as! Section0CustomeCellCollectionView
         cell.parentViewController = self
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         if (indexPath.section == 1) {
-            let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: TitleSectionView.identifier, for: indexPath) as! TitleSectionView
+            let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: CustomeTitleSectionCollectionView.identifier, for: indexPath) as! CustomeTitleSectionCollectionView
             header.configure()
             header.label.text = "Animations"
             return header
         }
-        let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: TitleSectionView.identifier, for: indexPath) as! TitleSectionView
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: CustomeTitleSectionCollectionView.identifier, for: indexPath) as! CustomeTitleSectionCollectionView
         header.configure()
         header.label.text = "StackViews"
         return header

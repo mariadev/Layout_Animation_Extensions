@@ -17,6 +17,7 @@ public enum SimpleAnimationEdge {
 protocol Animations {
     
     func shake()
+    
     func fadeIn(duration: TimeInterval,
                 delay: TimeInterval,
                 completion: ((Bool) -> Void)?) -> UIView

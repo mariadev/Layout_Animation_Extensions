@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Section0CellView: UICollectionViewCell {
+class Section0CustomeCellCollectionView: UICollectionViewCell {
     
     fileprivate var itemsSection2: [String] = [
         "image0",
@@ -44,7 +44,7 @@ class Section0CellView: UICollectionViewCell {
     }
 }
 
-extension Section0CellView: UICollectionViewDelegateFlowLayout {
+extension Section0CustomeCellCollectionView: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
@@ -62,7 +62,7 @@ extension Section0CellView: UICollectionViewDelegateFlowLayout {
     
 }
 
-extension Section0CellView: UICollectionViewDataSource {
+extension Section0CustomeCellCollectionView: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return itemsSection2.count
@@ -86,7 +86,7 @@ extension Section0CellView: UICollectionViewDataSource {
     
 }
 
-extension Section0CellView: UICollectionViewDelegate {
+extension Section0CustomeCellCollectionView: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let detailViewController = DetailViewController()
@@ -96,7 +96,7 @@ extension Section0CellView: UICollectionViewDelegate {
     }
 }
 
-extension Section0CellView {
+extension Section0CustomeCellCollectionView {
     
     func setupLayout () {
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout

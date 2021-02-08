@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol LayoutHelperUIViewUIStackHelper  {
+protocol UIViewToStackView  {
     func Stack(_ axis: NSLayoutConstraint.Axis,
                views: [UIView], spacing: CGFloat,
                alignment: UIStackView.Alignment,
@@ -26,7 +26,7 @@ protocol LayoutHelperUIViewUIStackHelper  {
 }
 
 
- extension LayoutHelperUIViewUIStackHelper where Self: UIView {
+ extension UIViewToStackView where Self: UIView {
      @discardableResult
      func Stack(_ axis: NSLayoutConstraint.Axis = .vertical,
                 views: [UIView],

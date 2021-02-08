@@ -11,14 +11,14 @@ public enum Padding {
     case top, left, right, bottom, verticalMargins, horizontalMargins, allMargins
 }
 
-protocol LayoutHelperStackViews {
+protocol StackViewsLayoutHelper {
     func setupSubview(backgroundColor: UIColor, cornerRadius: CGFloat, borderWidth: CGFloat, borderColor: UIColor ) -> CustomUIStackView
     func height(_ height: CGFloat) -> CustomUIStackView
     func width(_ width: CGFloat) -> CustomUIStackView
     func padding(_ margins: [Padding], amount: CGFloat) -> CustomUIStackView
 }
 
-extension LayoutHelperStackViews where Self: UIStackView {
+extension StackViewsLayoutHelper where Self: UIStackView {
     
     func setupSubview(backgroundColor: UIColor = .white, cornerRadius: CGFloat = 0, borderWidth: CGFloat = 0, borderColor: UIColor = .clear) -> CustomUIStackView {
         let subview = UIView(frame: bounds)

@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class Section1CellView: UICollectionViewCell {
+class Section1CustomeCellCollectionView: UICollectionViewCell {
     
     let label = CustomUILabel()
     let imageItem = CustomUIImageView()

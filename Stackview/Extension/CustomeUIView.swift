@@ -6,7 +6,7 @@
 //
 import UIKit
     
-class CustomUIView : UIView, Style ,Animations, LayoutHelper, LayoutHelperUIViewUIStackHelper {}
+class CustomUIView : UIView, Style ,Animations, LayoutHelper, UIViewToStackView {}
 
 
 

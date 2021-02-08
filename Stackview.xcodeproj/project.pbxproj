@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C49DB9725B776EE0084E749 /* TitleSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C49DB9625B776EE0084E749 /* TitleSectionView.swift */; };
-		4C8A30AB25BF737100160437 /* Section0CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A30AA25BF737100160437 /* Section0CellView.swift */; };
+		4C49DB9725B776EE0084E749 /* CustomeTitleSectionCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C49DB9625B776EE0084E749 /* CustomeTitleSectionCollectionView.swift */; };
+		4C8A30AB25BF737100160437 /* Section0CustomeCellCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A30AA25BF737100160437 /* Section0CustomeCellCollectionView.swift */; };
 		4C8A30AF25BF7CF000160437 /* CustomeUICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A30AE25BF7CF000160437 /* CustomeUICollectionView.swift */; };
 		4C8A30C025C0CA5400160437 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A30BF25C0CA5400160437 /* Style.swift */; };
 		4C8A30C325C0CAC500160437 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A30C225C0CAC500160437 /* Animations.swift */; };
 		4C8A30C625C0CB6500160437 /* LayoutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A30C525C0CB6500160437 /* LayoutHelper.swift */; };
-		4C8A30C925C0CB9A00160437 /* LayoutHelperUIViewUIStackHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A30C825C0CB9A00160437 /* LayoutHelperUIViewUIStackHelper.swift */; };
+		4C8A30C925C0CB9A00160437 /* UIViewToStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A30C825C0CB9A00160437 /* UIViewToStackView.swift */; };
 		4C8A30CC25C0CBDD00160437 /* CustomeUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A30CB25C0CBDD00160437 /* CustomeUIImageView.swift */; };
-		4C8A30CF25C0CC2D00160437 /* LayoutHelperStackViews .swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A30CE25C0CC2D00160437 /* LayoutHelperStackViews .swift */; };
+		4C8A30CF25C0CC2D00160437 /* StackViewsLayoutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A30CE25C0CC2D00160437 /* StackViewsLayoutHelper.swift */; };
 		4C8A30D625C2352000160437 /* CustomUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A30D525C2352000160437 /* CustomUILabel.swift */; };
-		4C8A30DB25C2375500160437 /* Section1CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A30DA25C2375500160437 /* Section1CellView.swift */; };
+		4C8A30DB25C2375500160437 /* Section1CustomeCellCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A30DA25C2375500160437 /* Section1CustomeCellCollectionView.swift */; };
 		4CC859C925AE0929000CA6C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC859C825AE0929000CA6C5 /* AppDelegate.swift */; };
 		4CC859CB25AE0929000CA6C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC859CA25AE0929000CA6C5 /* SceneDelegate.swift */; };
 		4CC859CD25AE0929000CA6C5 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC859CC25AE0929000CA6C5 /* DetailViewController.swift */; };
@@ -34,17 +34,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4C49DB9625B776EE0084E749 /* TitleSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSectionView.swift; sourceTree = "<group>"; };
-		4C8A30AA25BF737100160437 /* Section0CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section0CellView.swift; sourceTree = "<group>"; };
+		4C49DB9625B776EE0084E749 /* CustomeTitleSectionCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomeTitleSectionCollectionView.swift; sourceTree = "<group>"; };
+		4C8A30AA25BF737100160437 /* Section0CustomeCellCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section0CustomeCellCollectionView.swift; sourceTree = "<group>"; };
 		4C8A30AE25BF7CF000160437 /* CustomeUICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomeUICollectionView.swift; sourceTree = "<group>"; };
 		4C8A30BF25C0CA5400160437 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		4C8A30C225C0CAC500160437 /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		4C8A30C525C0CB6500160437 /* LayoutHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutHelper.swift; sourceTree = "<group>"; };
-		4C8A30C825C0CB9A00160437 /* LayoutHelperUIViewUIStackHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutHelperUIViewUIStackHelper.swift; sourceTree = "<group>"; };
+		4C8A30C825C0CB9A00160437 /* UIViewToStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewToStackView.swift; sourceTree = "<group>"; };
 		4C8A30CB25C0CBDD00160437 /* CustomeUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomeUIImageView.swift; sourceTree = "<group>"; };
-		4C8A30CE25C0CC2D00160437 /* LayoutHelperStackViews .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LayoutHelperStackViews .swift"; sourceTree = "<group>"; };
+		4C8A30CE25C0CC2D00160437 /* StackViewsLayoutHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewsLayoutHelper.swift; sourceTree = "<group>"; };
 		4C8A30D525C2352000160437 /* CustomUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUILabel.swift; sourceTree = "<group>"; };
-		4C8A30DA25C2375500160437 /* Section1CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section1CellView.swift; sourceTree = "<group>"; };
+		4C8A30DA25C2375500160437 /* Section1CustomeCellCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section1CustomeCellCollectionView.swift; sourceTree = "<group>"; };
 		4CC859C525AE0929000CA6C5 /* Stackview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stackview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CC859C825AE0929000CA6C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CC859CA25AE0929000CA6C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,8 +79,8 @@
 				4C8A30BF25C0CA5400160437 /* Style.swift */,
 				4C8A30C225C0CAC500160437 /* Animations.swift */,
 				4C8A30C525C0CB6500160437 /* LayoutHelper.swift */,
-				4C8A30C825C0CB9A00160437 /* LayoutHelperUIViewUIStackHelper.swift */,
-				4C8A30CE25C0CC2D00160437 /* LayoutHelperStackViews .swift */,
+				4C8A30C825C0CB9A00160437 /* UIViewToStackView.swift */,
+				4C8A30CE25C0CC2D00160437 /* StackViewsLayoutHelper.swift */,
 			);
 			path = "Animations+StyleExtensions";
 			sourceTree = "<group>";
@@ -137,9 +137,9 @@
 			isa = PBXGroup;
 			children = (
 				4CC859E725AE0ADF000CA6C5 /* CustomeColoredViews.swift */,
-				4C49DB9625B776EE0084E749 /* TitleSectionView.swift */,
-				4C8A30AA25BF737100160437 /* Section0CellView.swift */,
-				4C8A30DA25C2375500160437 /* Section1CellView.swift */,
+				4C49DB9625B776EE0084E749 /* CustomeTitleSectionCollectionView.swift */,
+				4C8A30AA25BF737100160437 /* Section0CustomeCellCollectionView.swift */,
+				4C8A30DA25C2375500160437 /* Section1CustomeCellCollectionView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -238,21 +238,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C49DB9725B776EE0084E749 /* TitleSectionView.swift in Sources */,
+				4C49DB9725B776EE0084E749 /* CustomeTitleSectionCollectionView.swift in Sources */,
 				4C8A30D625C2352000160437 /* CustomUILabel.swift in Sources */,
 				4CC859EC25AE0C26000CA6C5 /* UIColor+Hex.swift in Sources */,
 				4CC85A0225AE2B89000CA6C5 /* ModelControllers.swift in Sources */,
-				4C8A30C925C0CB9A00160437 /* LayoutHelperUIViewUIStackHelper.swift in Sources */,
+				4C8A30C925C0CB9A00160437 /* UIViewToStackView.swift in Sources */,
 				4CC85A0525AE2FF7000CA6C5 /* UIController+Navigation.swift in Sources */,
 				4C8A30C025C0CA5400160437 /* Style.swift in Sources */,
-				4C8A30CF25C0CC2D00160437 /* LayoutHelperStackViews .swift in Sources */,
+				4C8A30CF25C0CC2D00160437 /* StackViewsLayoutHelper.swift in Sources */,
 				4CC859DF25AE0967000CA6C5 /* CustomeUIView.swift in Sources */,
 				4CC859CD25AE0929000CA6C5 /* DetailViewController.swift in Sources */,
 				4CC859E225AE0974000CA6C5 /* CustomUIStackView.swift in Sources */,
-				4C8A30AB25BF737100160437 /* Section0CellView.swift in Sources */,
+				4C8A30AB25BF737100160437 /* Section0CustomeCellCollectionView.swift in Sources */,
 				4CC859E825AE0ADF000CA6C5 /* CustomeColoredViews.swift in Sources */,
 				4C8A30AF25BF7CF000160437 /* CustomeUICollectionView.swift in Sources */,
-				4C8A30DB25C2375500160437 /* Section1CellView.swift in Sources */,
+				4C8A30DB25C2375500160437 /* Section1CustomeCellCollectionView.swift in Sources */,
 				4CC859EF25AE0C43000CA6C5 /* Colors.swift in Sources */,
 				4CC859C925AE0929000CA6C5 /* AppDelegate.swift in Sources */,
 				4C8A30CC25C0CBDD00160437 /* CustomeUIImageView.swift in Sources */,

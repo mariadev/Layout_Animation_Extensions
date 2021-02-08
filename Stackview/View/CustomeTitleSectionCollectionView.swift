@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class TitleSectionView: UICollectionReusableView {
+final class CustomeTitleSectionCollectionView: UICollectionReusableView {
     
     static let identifier: String = "TitleSection"
     
