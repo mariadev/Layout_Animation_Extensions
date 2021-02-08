@@ -31,7 +31,7 @@ class ModelControllers {
             case 7:
                 return layoutSection0Item7(view: view)
             case 8:
-                return layoutSection1Item0(view: view)
+                return layoutSection0Item8(view: view)
             default:
                 fatalError("not supported yet")
             }
@@ -184,6 +184,14 @@ class ModelControllers {
         
     }
     
+    func layoutSection0Item8(view: UIView){
+        let formView = FormView()
+        view.addSubview(formView)
+        formView.edgeToSafeArea(view, constant: 20)
+        view.backgroundColor = .white
+        
+    }
+    
     private func layoutSection1Item0(view: UIView){
         let container = CustomUIView()
         view.addSubview(container)
@@ -191,7 +199,7 @@ class ModelControllers {
         
         let view1 = customeViews.view1
         container.addSubview(view1)
-        view1.setAnchor(top: container.topAnchor, bottom: nil, right: container.leadingAnchor, left: container.trailingAnchor)
+        view1.setAnchor(top: container.topAnchor, bottom: nil, right: container.trailingAnchor , left: container.leadingAnchor)
         view1.setHeightMultiplier(viewHeight: container.heightAnchor, multiplier: 0.5,constant: 9)
         view1.dropShadow()
         
@@ -213,7 +221,7 @@ class ModelControllers {
         
         let view1 = customeViews.view1
         container.addSubview(view1)
-        view1.setAnchor(top: container.topAnchor, bottom: nil, right: container.leadingAnchor, left: container.trailingAnchor)
+        view1.setAnchor(top: container.topAnchor, bottom: nil, right: container.trailingAnchor, left:  container.leadingAnchor)
         view1.setHeightMultiplier(viewHeight: container.heightAnchor, multiplier: 0.5,constant: 9)
         view1.dropShadow()
         
@@ -235,7 +243,7 @@ class ModelControllers {
         
         let view1 = customeViews.view1
         container.addSubview(view1)
-        view1.setAnchor(top: container.topAnchor, bottom: nil, right: container.leadingAnchor, left: container.trailingAnchor)
+        view1.setAnchor(top: container.topAnchor, bottom: nil, right: container.trailingAnchor, left: container.leadingAnchor)
         view1.setHeightMultiplier(viewHeight: container.heightAnchor, multiplier: 0.5,constant: 9)
         view1.dropShadow()
         
@@ -257,7 +265,7 @@ class ModelControllers {
         
         let view1 = customeViews.view1
         container.addSubview(view1)
-        view1.setAnchor(top: container.topAnchor, bottom: nil, right: container.leadingAnchor, left: container.trailingAnchor)
+        view1.setAnchor(top: container.topAnchor, bottom: nil, right:container.trailingAnchor, left: container.leadingAnchor)
         view1.setHeightMultiplier(viewHeight: container.heightAnchor, multiplier: 0.5,constant: 9)
         view1.dropShadow()
         
@@ -279,7 +287,7 @@ class ModelControllers {
         
         let view1 = customeViews.view1
         container.addSubview(view1)
-        view1.setAnchor(top: container.topAnchor, bottom: nil, right: container.leadingAnchor, left: container.trailingAnchor)
+        view1.setAnchor(top: container.topAnchor, bottom: nil, right: container.trailingAnchor, left: container.leadingAnchor)
         view1.setHeightMultiplier(viewHeight: container.heightAnchor, multiplier: 0.5,constant: 9)
         view1.dropShadow()
         
@@ -301,7 +309,7 @@ class ModelControllers {
         
         let view1 = customeViews.view1
         container.addSubview(view1)
-        view1.setAnchor(top: container.topAnchor, bottom: nil, right: container.leadingAnchor, left: container.trailingAnchor)
+        view1.setAnchor(top: container.topAnchor, bottom: nil, right: container.trailingAnchor, left: container.leadingAnchor)
         view1.setHeightMultiplier(viewHeight: container.heightAnchor, multiplier: 0.5,constant: 9)
         view1.dropShadow()
         
@@ -322,7 +330,7 @@ class ModelControllers {
         
         let view1 = customeViews.view1
         container.addSubview(view1)
-        view1.setAnchor(top: container.topAnchor, bottom: nil, right: container.leadingAnchor, left: container.trailingAnchor)
+        view1.setAnchor(top: container.topAnchor, bottom: nil, right: container.trailingAnchor, left: container.leadingAnchor)
         view1.setHeightMultiplier(viewHeight: container.heightAnchor, multiplier: 0.5,constant: 9)
         view1.dropShadow()
         
@@ -337,6 +345,5 @@ class ModelControllers {
         view.backgroundColor = .white
     }
     
-   
     
 }

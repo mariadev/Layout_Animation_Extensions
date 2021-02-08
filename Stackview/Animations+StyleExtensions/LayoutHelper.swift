@@ -48,8 +48,8 @@ extension LayoutHelper where Self: UIView {
         translatesAutoresizingMaskIntoConstraints = false
         topAnchor.constraint(equalTo: view.topAnchor, constant: constant).isActive = true
         leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: constant).isActive = true
-        trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: constant).isActive = true
-        bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: constant).isActive = true
+        trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -constant).isActive = true
+        bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -constant).isActive = true
         
     }
     
@@ -58,8 +58,8 @@ extension LayoutHelper where Self: UIView {
         translatesAutoresizingMaskIntoConstraints = false
         topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: constant).isActive = true
         leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: constant).isActive = true
-        trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: constant).isActive = true
-        bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: constant).isActive = true
+        trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -constant).isActive = true
+        bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -constant).isActive = true
         
     }
     
@@ -96,13 +96,13 @@ extension LayoutHelper where Self: UIView {
             topAnchor.constraint(equalTo: top, constant: paddingTop).isActive = true
         }
         if let bottom = bottom {
-            bottomAnchor.constraint(equalTo: bottom, constant: paddingBottom).isActive = true
+            bottomAnchor.constraint(equalTo: bottom, constant: -paddingBottom).isActive = true
         }
-        if let left = left {
-            trailingAnchor.constraint(equalTo: left, constant: -paddingRight).isActive = true
+        if let  right = right  {
+            trailingAnchor.constraint(equalTo: right, constant: -paddingRight).isActive = true
         }
-        if let right = right {
-            leadingAnchor.constraint(equalTo: right, constant: paddingLeft).isActive = true
+        if let  left = left {
+            leadingAnchor.constraint(equalTo: left, constant: paddingLeft).isActive = true
         }
     }
     

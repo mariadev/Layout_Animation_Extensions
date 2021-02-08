@@ -18,6 +18,9 @@
 		4C8A30CF25C0CC2D00160437 /* StackViewsLayoutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A30CE25C0CC2D00160437 /* StackViewsLayoutHelper.swift */; };
 		4C8A30D625C2352000160437 /* CustomUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A30D525C2352000160437 /* CustomUILabel.swift */; };
 		4C8A30DB25C2375500160437 /* Section1CustomeCellCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A30DA25C2375500160437 /* Section1CustomeCellCollectionView.swift */; };
+		4C8E0EEA25D2024300655D60 /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8E0EE925D2024300655D60 /* FormView.swift */; };
+		4C8E0EED25D2027000655D60 /* CustomUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8E0EEC25D2027000655D60 /* CustomUIButton.swift */; };
+		4C8E0EF025D202A700655D60 /* CustomeUISwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8E0EEF25D202A700655D60 /* CustomeUISwitch.swift */; };
 		4CC859C925AE0929000CA6C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC859C825AE0929000CA6C5 /* AppDelegate.swift */; };
 		4CC859CB25AE0929000CA6C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC859CA25AE0929000CA6C5 /* SceneDelegate.swift */; };
 		4CC859CD25AE0929000CA6C5 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC859CC25AE0929000CA6C5 /* DetailViewController.swift */; };
@@ -45,6 +48,9 @@
 		4C8A30CE25C0CC2D00160437 /* StackViewsLayoutHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewsLayoutHelper.swift; sourceTree = "<group>"; };
 		4C8A30D525C2352000160437 /* CustomUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUILabel.swift; sourceTree = "<group>"; };
 		4C8A30DA25C2375500160437 /* Section1CustomeCellCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section1CustomeCellCollectionView.swift; sourceTree = "<group>"; };
+		4C8E0EE925D2024300655D60 /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
+		4C8E0EEC25D2027000655D60 /* CustomUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIButton.swift; sourceTree = "<group>"; };
+		4C8E0EEF25D202A700655D60 /* CustomeUISwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomeUISwitch.swift; sourceTree = "<group>"; };
 		4CC859C525AE0929000CA6C5 /* Stackview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stackview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CC859C825AE0929000CA6C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CC859CA25AE0929000CA6C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +135,8 @@
 				4C8A30AE25BF7CF000160437 /* CustomeUICollectionView.swift */,
 				4CC859EB25AE0C26000CA6C5 /* UIColor+Hex.swift */,
 				4CC85A0425AE2FF7000CA6C5 /* UIController+Navigation.swift */,
+				4C8E0EEC25D2027000655D60 /* CustomUIButton.swift */,
+				4C8E0EEF25D202A700655D60 /* CustomeUISwitch.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -140,6 +148,7 @@
 				4C49DB9625B776EE0084E749 /* CustomeTitleSectionCollectionView.swift */,
 				4C8A30AA25BF737100160437 /* Section0CustomeCellCollectionView.swift */,
 				4C8A30DA25C2375500160437 /* Section1CustomeCellCollectionView.swift */,
+				4C8E0EE925D2024300655D60 /* FormView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -250,13 +259,16 @@
 				4CC859CD25AE0929000CA6C5 /* DetailViewController.swift in Sources */,
 				4CC859E225AE0974000CA6C5 /* CustomUIStackView.swift in Sources */,
 				4C8A30AB25BF737100160437 /* Section0CustomeCellCollectionView.swift in Sources */,
+				4C8E0EF025D202A700655D60 /* CustomeUISwitch.swift in Sources */,
 				4CC859E825AE0ADF000CA6C5 /* CustomeColoredViews.swift in Sources */,
 				4C8A30AF25BF7CF000160437 /* CustomeUICollectionView.swift in Sources */,
 				4C8A30DB25C2375500160437 /* Section1CustomeCellCollectionView.swift in Sources */,
 				4CC859EF25AE0C43000CA6C5 /* Colors.swift in Sources */,
 				4CC859C925AE0929000CA6C5 /* AppDelegate.swift in Sources */,
+				4C8E0EEA25D2024300655D60 /* FormView.swift in Sources */,
 				4C8A30CC25C0CBDD00160437 /* CustomeUIImageView.swift in Sources */,
 				4CC859FE25AE26C5000CA6C5 /* CollectionView.swift in Sources */,
+				4C8E0EED25D2027000655D60 /* CustomUIButton.swift in Sources */,
 				4C8A30C325C0CAC500160437 /* Animations.swift in Sources */,
 				4CC859CB25AE0929000CA6C5 /* SceneDelegate.swift in Sources */,
 				4C8A30C625C0CB6500160437 /* LayoutHelper.swift in Sources */,

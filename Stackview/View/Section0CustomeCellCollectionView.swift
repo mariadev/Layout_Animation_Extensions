@@ -18,6 +18,7 @@ class Section0CustomeCellCollectionView: UICollectionViewCell {
         "image5",
         "image6",
         "image7",
+        "image8",
     ]
     
     weak var parentViewController: UIViewController?
@@ -81,7 +82,7 @@ extension Section0CustomeCellCollectionView: UICollectionViewDataSource {
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = 15
-        imageView.setAnchor(top: cell.topAnchor, bottom: cell.bottomAnchor, right: cell.leadingAnchor, left: cell.trailingAnchor, paddingLeft: 4, paddingRight: 4)
+        imageView.setAnchor(top: cell.topAnchor, bottom: cell.bottomAnchor, right: cell.trailingAnchor, left: cell.leadingAnchor, paddingLeft: 4, paddingRight: 4)
     }
     
 }

@@ -18,13 +18,13 @@ import UIKit
 class CollectionView: UIViewController {
     
     fileprivate var itemsSection1: [String] = [
-        "image8",
-        "image8",
-        "image8",
-        "image8",
-        "image8",
-        "image8",
-        "image8",
+        "image1.0",
+        "image1.0",
+        "image1.0",
+        "image1.0",
+        "image1.0",
+        "image1.0",
+        "image1.0",
         
     ]
     

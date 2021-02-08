@@ -25,7 +25,7 @@ class Section1CustomeCellCollectionView: UICollectionViewCell {
         view.addSubview(imageItem)
         
         view.edgeTo(contentView)
-        imageItem.setAnchor(top: label.bottomAnchor, bottom: view.bottomAnchor, right: view.leadingAnchor, left: view.trailingAnchor,  paddingLeft: 4, paddingRight: 4)
+        imageItem.setAnchor(top: label.bottomAnchor, bottom: view.bottomAnchor, right: view.trailingAnchor, left: view.leadingAnchor,  paddingLeft: 4, paddingRight: 4)
         label.toTopAndCenter(topView:  view, centerView:  view)
         
         imageItem.contentMode = .scaleAspectFill
